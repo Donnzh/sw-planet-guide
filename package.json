@@ -1,0 +1,26 @@
+{
+  "name": "sw-planet-guide",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "http://donnzh.github.io/sw-planet-guide",
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "gh-pages": "^1.1.0",
+    "lodash": "^4.17.10",
+    "material-ui": "next",
+    "material-ui-icons": "^1.0.0-beta.36",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-responsive": "^4.1.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

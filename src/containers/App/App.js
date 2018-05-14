@@ -13,8 +13,8 @@ class App extends Component {
       <div className="app-container">
         <main >
           <Switch>
-            <Route path="/rules" component={NewPage}/>
-            <Route exact path="/" render={() => <HomePage />}/>
+            <Route path="/newPage" component={NewPage}/>
+            <Route exact path="" render={() => <HomePage />}/>
           </Switch>
         </main>
       </div>

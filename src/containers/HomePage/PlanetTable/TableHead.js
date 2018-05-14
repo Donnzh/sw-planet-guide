@@ -6,7 +6,6 @@ import {
   TableRow,
   TableSortLabel,
 } from 'material-ui/Table';
-import Tooltip from 'material-ui/Tooltip';
 
 const columnData = [
   {id: 'name', numeric: false, disablePadding: true, label: 'Planet'},
@@ -31,7 +30,7 @@ export default class EnhancedTableHead extends React.Component {
         <TableRow>
           <TableCell padding="checkbox">
           </TableCell>
-          {columnData.map((column,i) => {
+          {columnData.map((column, i) => {
             return (
               <TableCell
                 key={i}
@@ -39,17 +38,12 @@ export default class EnhancedTableHead extends React.Component {
                 padding={column.disablePadding ? 'none' : 'default'}
                 sortDirection={orderBy === column.id ? order : false} //Set aria-sort direction.
               >
-                <Tooltip
-                  title="Sort"
-                  placement={column.numeric ? 'bottom-end' : 'bottom-start'}
-                  enterDelay={300}>
-                  <TableSortLabel
-                    active={orderBy === column.id}
-                    direction={order}
-                    onClick={this.createSortHandler(column.id)}>
-                    {column.label}
-                  </TableSortLabel>
-                </Tooltip>
+                <TableSortLabel
+                  active={orderBy === column.id}
+                  direction={order}
+                  onClick={this.createSortHandler(column.id)}>
+                  {column.label}
+                </TableSortLabel>
               </TableCell>
             );
           })}

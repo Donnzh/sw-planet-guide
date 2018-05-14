@@ -189,7 +189,6 @@ class EnhancedTable extends React.Component {
         <div className={classes.tableWrapper}>
           <Table className={classes.table} aria-labelledby="tableTitle">
             <EnhancedTableHead
-
               order={order}
               orderBy={orderBy}
               onRequestSort={this.handleRequestSort}
